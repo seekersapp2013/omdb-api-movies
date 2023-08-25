@@ -6,7 +6,7 @@ import {
 } from "../../helpers";
 import "./Form.css";
 
-const Form = ({ handleMovieSearch }) => {
+function Form({ handleMovieSearch }) {
   const [userInput, setUserInput] = useState("");
 
   return (

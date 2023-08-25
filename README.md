@@ -31,9 +31,9 @@ Git
 To use the app, visit the web link in the short description above. If you would like to try it on your own:
 
 ```
-1. Fork and/or Clone repo.
-2. Run 'npm install' on your local repo so as to get the required dependencies.
-3. Launch application with 'npm start'.
+1. Clone repo.
+2. Run 'npm install' or 'yarn' on your local repo so as to get the required dependencies.
+3. Launch application with 'npm start' or 'yarn start'.
 ```
 
 ## Running the tests 🧪

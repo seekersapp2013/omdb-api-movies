@@ -4,15 +4,21 @@ import Movies from "../Movies/Movies";
 import "./App.css";
 import { handleApiCallHelper, setMovieToSearchHelper } from "../../helpers";
 
-const App = () => {
+function App() {
   const [retrievedMovie, setRetrievedMovie] = useState({});
   const [movieToSearch, setMovieToSearch] = useState("");
 
-  useEffect(
-    () =>
-      movieToSearch && handleApiCallHelper(movieToSearch, setRetrievedMovie),
-    [movieToSearch]
-  );
+  // useEffect(
+  //   () =>
+  //     movieToSearch && handleApiCallHelper(movieToSearch, setRetrievedMovie),
+  //   [movieToSearch]
+  // );
+
+  useEffect(() => {
+    if (movieToSearch) {
+      handleApiCallHelper(movieToSearch, setRetrievedMovie);
+    }
+  }, [movieToSearch]);
 
   const handleMovieToSearch = (movieInput) => {
     setMovieToSearchHelper(movieInput, setMovieToSearch);
@@ -36,6 +42,6 @@ const App = () => {
       </section>
     </div>
   );
-};
+}
 
 export default App;
